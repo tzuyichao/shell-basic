@@ -1,0 +1,1 @@
+Get-Process -Name powershell, smss, notepad
