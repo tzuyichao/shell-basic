@@ -1,0 +1,4 @@
+"name","username","phone","password hash"
+"John Smith","jsmith",555-555-1212,4e1243bd22c66e76c2ba9eddc1f91394e57f9f83
+"Jane Smith","jnsmith",555-555-1234,dba7673010f19a94af4345453005933fd511bea9
+"Bill Jones","bjones",555-555-6789,9054fbe0b622c638224d50d20824d2ff6782e308
