@@ -1,0 +1,6 @@
+\.\./
+etc/passwd
+etc/shadow
+cmd\.exe
+/bin/sh
+/bin/bash
