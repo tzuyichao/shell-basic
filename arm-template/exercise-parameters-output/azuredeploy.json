@@ -9,6 +9,16 @@
             "metadata": {
                 "description": "The name of the Azure storage resource"
             }
+        },
+        "storageSKU": {
+            "type": "string",
+            "defaultValue": "Standard_LRS",
+            "allowedValues": [
+                "Standard_LRS",
+                "Standard_GRS",
+                "Standard_RAGRS",
+                "Standard_ZRS"
+            ]
         }
     },
     "functions": [],
@@ -24,7 +34,7 @@
             "location": "[resourceGroup().location]",
             "kind": "StorageV2",
             "sku": {
-                "name": "Standard_LRS",
+                "name": "[parameters('storageSKU')]",
                 "tier": "Standard"
             }
         }
