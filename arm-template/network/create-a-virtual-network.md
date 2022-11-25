@@ -25,6 +25,26 @@ Get-AzVirtualNetwork -Name 'VNet1' -ResourceGroupName $rgName
 Remove-AzResourceGroup -Name $rgName
 ```
 
+### Another Version (想的，未驗證)
+
+#### Deploy
+
+```
+$deployment = 'testcreatevirtualnetowkr1'
+$rgName = 'testrg'
+New-AzResourceGroupDeployment `
+>>   -Name $deployment
+>>   -ResourceGroupName $rgName `
+>>   -TemplateFile .\create-a-virtual-network.json `
+>>   -TemplateParameterFile .\create-a-virtual-network-parameters.json
+```
+
+#### Clean up
+
+```
+Remove-AzResourceGroupDeployment -ResourceGroupName $rgName -Name  $deployment
+```
+
 ### Reference 
 
 [Quickstart: Create a virtual network - Resource Manager template](https://learn.microsoft.com/en-us/azure/virtual-network/quick-create-template)
