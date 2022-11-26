@@ -25,7 +25,7 @@ Get-AzVirtualNetwork -Name 'VNet1' -ResourceGroupName $rgName
 Remove-AzResourceGroup -Name $rgName
 ```
 
-### Another Version (想的，未驗證)
+### Another Version
 
 #### Deploy
 
@@ -33,16 +33,16 @@ Remove-AzResourceGroup -Name $rgName
 $deployment = 'testcreatevirtualnetowkr1'
 $rgName = 'testrg'
 New-AzResourceGroupDeployment `
->>   -Name $deployment
->>   -ResourceGroupName $rgName `
->>   -TemplateFile .\create-a-virtual-network.json `
->>   -TemplateParameterFile .\create-a-virtual-network-parameters.json
+ -Name $deployment `
+ -ResourceGroupName $rgName `
+ -TemplateFile .\create-a-virtual-network.json `
+ -TemplateParameterFile .\create-a-virtual-network-parameters.json
 ```
 
 #### Clean up
 
 ```
-Remove-AzResourceGroupDeployment -ResourceGroupName $rgName -Name  $deployment
+Remove-AzVirtualNetwork -Name VNet1 -ResourceGroupName $rgName
 ```
 
 ### Reference 
