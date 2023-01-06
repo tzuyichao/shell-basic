@@ -2,7 +2,7 @@
 
 ##
 
-using azure cloud shell
+using azure cloud shell with bash
 
 ```
 RESOURCE_GROUP_NAME=az204-aci-rg
@@ -19,18 +19,18 @@ CONTAINER_NAME=mycontainer
 ```
 
 ```
-az container create --resource-group $RESOURCE_GROUP_NAME
-    --name $CONTAINER_NAME
-    --image mcr.microsoft.com/azuredocs/aci-helloworld
-    --ports 80
-    --dns-name-label $DNS_NAME_LABEL 
-    --location $LOCATION
+az container create --resource-group $RESOURCE_GROUP_NAME \
+    --name $CONTAINER_NAME \
+    --image mcr.microsoft.com/azuredocs/aci-helloworld \
+    --ports 80 \
+    --dns-name-label $DNS_NAME_LABEL \
+    --location $LOCATION 
 ```
 
 ```
-az container show --resource-group $RESOURCE_GROUP_NAME
-    --name $CONTAINER_NAME
-    --query "{FQDN:ipAddress.fqdn,ProvisioningState:provisioningState}"
+az container show --resource-group $RESOURCE_GROUP_NAME \
+    --name $CONTAINER_NAME \
+    --query "{FQDN:ipAddress.fqdn,ProvisioningState:provisioningState}" \
     --out table
 ```
 
