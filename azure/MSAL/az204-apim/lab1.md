@@ -9,8 +9,8 @@ Using Azure cloud shell with bash
 ```
 resourceGroupName=az204-apim-rg
 myApiName=az204-apim-$RANDOM
-myLocation=<myLocation>
-myEmail=<myEmail>
+myLocation=<myLocatino>
+myEmail=<publisheremail>
 ```
 
 2. Create Resource Group
@@ -24,7 +24,7 @@ az group create --name $resourceGroupName --location $myLocation
 ```
 az apim create -n $myApiName \
     --location $myLocation \
-    --publisher-emial $myEmail \
+    --publisher-email $myEmail \
     --resource-group $resourceGroupName \
     --publisher-name AZ204-APIM-Exercise \
     --sku-name Consumption
