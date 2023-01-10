@@ -39,7 +39,7 @@ az redis list-keys --name $redisName --resource-group $resourceGroupName
 ## Clean up
 
 ```
-az group delete --resource-group $resourceGroupName --no-wait
+az group delete --name $resourceGroupName --no-wait
 ```
 
 ## Reference
