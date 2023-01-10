@@ -15,8 +15,12 @@ redisName=az204redis$RANDOM
 2. Create Azure Cache for Redis
 
 ```
+az group create --resource-group $resourceGroupName --location $myLocation
+```
+
+```
 az redis create --location $myLocation \
-    --resource-group $resgourceGroupName \
+    --resource-group $resourceGroupName \
     --name $redisName \
     --sku Basic \
     --vm-size c0
@@ -25,8 +29,7 @@ az redis create --location $myLocation \
 3. List keys
 
 ```
-az redis list-keys --name $redisName
-    --resource-group $resourceGroupName
+az redis list-keys --name $redisName --resource-group $resourceGroupName
 ```
 
 ## C# Client Project
@@ -36,7 +39,7 @@ az redis list-keys --name $redisName
 ## Clean up
 
 ```
-az group delete -n $resourceGroupName --no-wait
+az group delete --resource-group $resourceGroupName --no-wait
 ```
 
 ## Reference
