@@ -25,11 +25,11 @@ Using Azure Cloud Shell with Bash
 
     Create a secret
 
-        az keyvault secret set --vault-name $myKeyVault --name "ExamplePassword" --Value "hVFkk965BuUv"
+        az keyvault secret set --vault-name $myKeyVault --name "ExamplePassword" --value "hVFkk965BuUv"
 
     retrieve the secret
 
-        az keyvault secret show --nane "ExamplePassword" --vault-name $myKeyVault
+        az keyvault secret show --name "ExamplePassword" --vault-name $myKeyVault
 
 ## Clean up resources
 
