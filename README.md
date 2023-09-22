@@ -1,2 +1,2 @@
-# powershell-basic
-Learning PowerShell
+# shell-basic
+Learning Shell
