@@ -1,0 +1,11 @@
+[stage]
+10.0.2.5
+10.0.2.6
+searchqas.example.com
+
+[production]
+search.example.com
+10.0.10.5
+10.0.10.18
+10.0.10.21
+
