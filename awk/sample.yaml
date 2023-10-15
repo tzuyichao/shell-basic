@@ -1,0 +1,16 @@
+---
+  clusters:
+    cluster-1:
+      broker_list:
+        - "cluster1-1:9092"
+        - "cluster1-2:9092"
+        - "cluster1-3:9092"
+      zookeeper: "11.11.11.111:2181/custer1,11.11.11.112:2182/cluster1,11.11.11.113:2181/cluster1"
+    cluster-2:
+      broker_list:
+        - "cluster2-1:9092"
+        - "cluster2-2:9092"
+        - "cluster2-3:9092"
+      zookeeper: "11.11.11.111:2181/custer2,11.11.11.112:2182/cluster2,11.11.11.113:2181/cluster2"
+  local_config:
+    cluster: cluster-1
